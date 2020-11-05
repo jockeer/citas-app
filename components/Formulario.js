@@ -45,10 +45,9 @@ const Formulario = ({citas,setCitas,guardarMostrarForm}) => {
     const confirmarHora = (hora) => {
         const opciones = {
             hour:'numeric',
-            minute:'2-digit',
-            hour12:false
+            minute:'2-digit'
         }
-        guardarHora(hora.toLocaleString('en-US',opciones));
+        guardarHora(hora.toLocaleTimeString('en-US', opciones));
         hideTimePicker();
     };
 
